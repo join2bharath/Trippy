@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamil Nadu Temple Tourism - Sacred Heritage</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Serif+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-logo">🕌 TN Temples</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#districts">Districts</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="floating-om">ॐ</div>
+  <div class="hero-content">
+    <p class="hero-tagline">🪔 Sacred Temples of Tamil Nadu 🪔</p>
+    <h1 class="hero-title">Tamil Nadu</h1>
+    <h2 class="hero-subtitle">Temple Heritage Tourism</h2>
+    <p class="hero-desc">Discover the divine splendour of ancient Dravidian temples across 38 magnificent districts. Journey through millennia of spiritual tradition, breathtaking architecture, and sacred heritage.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">38</span>
+        <span class="stat-label">Districts</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">114+</span>
+        <span class="stat-label">Temples</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">2000+</span>
+        <span class="stat-label">Years of Heritage</span>
+      </div>
+    </div>
+    <button class="hero-btn" onclick="document.getElementById('districts').scrollIntoView({behavior:'smooth'})">Explore All Districts ✦</button>
+  </div>
+  <div class="scroll-indicator">↓</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Why Tamil Nadu?</h2>
+      <p>Tamil Nadu is home to the world's most magnificent Dravidian temples, with towering gopurams (gateway towers) painted in vibrant colours and adorned with thousands of intricate sculptures depicting deities, celestial beings, and mythological narratives.</p>
+      <p>The state hosts over 33,000 temples, more than any other region on Earth. These are not merely places of worship — they are living museums of art, architecture, music, dance, and philosophy spanning over 2,000 years of unbroken civilisation.</p>
+      <p>Our platform helps pilgrims, tourists, and heritage enthusiasts discover the sacred gems of all 38 districts of Tamil Nadu, offering detailed information, travel guidance, and cultural insights.</p>
+      <div class="about-features">
+        <div class="feature-card">
+          <div class="feature-icon">🛕</div>
+          <div class="feature-title">Ancient Heritage</div>
+          <div class="feature-desc">Temples dating back 1500+ years</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <div class="feature-title">District Guide</div>
+          <div class="feature-desc">Comprehensive 38-district coverage</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📿</div>
+          <div class="feature-title">Pilgrimage Routes</div>
+          <div class="feature-desc">Curated spiritual journeys</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎭</div>
+          <div class="feature-title">Culture & Arts</div>
+          <div class="feature-desc">Festivals, music & Bharatanatyam</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-image-collage">
+      <img class="collage-img"
+        src="https://i.pinimg.com/736x/3b/fa/85/3bfa85d558b43c24dc43036f77cbe52f.jpg"
+        alt="Meenakshi Temple"
+        onerror="this.src=''; this.style.background='linear-gradient(135deg,#3D1A00,#FF6B00)';">
+      <img class="collage-img"
+        src="https://thumbs.dreamstime.com/b/great-brihadeeswara-temple-tanjore-india-great-brihadeeswara-temple-tanjore-142817572.jpg"
+        alt="Brihadeeswarar"
+        onerror="this.src=''; this.style.background='linear-gradient(135deg,#5C0A0A,#C0392B)';">
+      <img class="collage-img"
+        src="https://pbs.twimg.com/media/G9kS9EDawAAcs6h.jpg"
+        alt="Chidambaram"
+        onerror="this.src=''; this.style.background='linear-gradient(135deg,#1A3D00,#2ECC71)';">
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH & DISTRICTS HEADER -->
+<div class="search-section" id="districts">
+  <div class="section-header" style="padding-top:1rem">
+    <p class="section-label">✦ Explore ✦</p>
+    <h2 class="section-title">All 38 Districts</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="search-box">
+    <input
+      type="text"
+      class="search-input"
+      id="searchInput"
+      placeholder="Search district or temple name..."
+      oninput="filterDistricts(this.value)">
+    <button class="search-btn" onclick="filterDistricts(document.getElementById('searchInput').value)">Search 🔍</button>
+  </div>
+</div>
+
+<!-- DISTRICTS GRID -->
+<section class="districts-section">
+  <div class="districts-grid" id="districtsGrid">
+    <!-- Cards injected by script.js -->
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-header">
+    <p class="section-label">✦ What We Offer ✦</p>
+    <h2 class="section-title">Our Services</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🗺️</span>
+      <h3 class="service-title">Temple Route Planning</h3>
+      <p class="service-desc">Customised pilgrimage itineraries across Tamil Nadu's temple circuits — Shaiva, Vaishnava, Shakti, and Murugan trails — optimised for time and devotion.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🎧</span>
+      <h3 class="service-title">Audio Heritage Guide</h3>
+      <p class="service-desc">Immersive audio guides in Tamil, English, and Hindi, narrating temple history, mythology, and architectural significance as you walk through the sacred grounds.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏨</span>
+      <h3 class="service-title">Pilgrimage Stays</h3>
+      <p class="service-desc">Curated stays near major temples — from simple dharmashalas to heritage hotels — respecting the sacred atmosphere of pilgrimage towns.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📅</span>
+      <h3 class="service-title">Festival Calendar</h3>
+      <p class="service-desc">Real-time festival schedules for all 38 districts — Brahmotsavam, Panguni Uthiram, Karthigai Deepam, Thai Pusam, and hundreds more events year-round.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📸</span>
+      <h3 class="service-title">Photo & Documentation</h3>
+      <p class="service-desc">Authorised photography permits, drone documentation assistance, and archive access for researchers studying Dravidian temple art and iconography.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🧘</span>
+      <h3 class="service-title">Spiritual Retreats</h3>
+      <p class="service-desc">Guided meditation, temple yoga sessions, and spiritual discourses with temple priests at selected destinations including Chidambaram and Tiruvannamalai.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-header">
+    <p class="section-label">✦ Get In Touch ✦</p>
+    <h2 class="section-title">Contact Us</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Plan Your Sacred Journey</h3>
+      <p>Our team of temple experts and heritage travel consultants are ready to help you craft the perfect Tamil Nadu temple experience. Reach out for personalised guidance, group tour packages, or research assistance.</p>
+      <div class="contact-item">
+        <span class="contact-item-icon">📍</span>
+        <div class="contact-item-text">
+          <h4>Office Address</h4>
+          <p>Temple Heritage Tourism Centre<br>Erode, Chennai – 638 153, Tamil Nadu</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-icon">📞</span>
+        <div class="contact-item-text">
+          <h4>Helpline</h4>
+          <p>+91 7845011886 (Mon–Sat, 9am–6pm)</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-icon">📧</span>
+        <div class="contact-item-text">
+          <h4>Email</h4>
+          <p>smilehappiness2214@gmail.com</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-icon">🌐</span>
+        <div class="contact-item-text">
+          <h4>Website</h4>
+          <p>televein.in</p>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <div class="form-group">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-input" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Service Interested In</label>
+        <input type="text" class="form-input" placeholder="e.g. Temple Route Planning, Pilgrimage Stays">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Your Message</label>
+        <textarea class="form-textarea" placeholder="Tell us about your travel plans, interests, or any questions..."></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message 🙏</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🕌 Tamil Nadu Temples</div>
+  <p class="footer-tagline">Guiding souls through the sacred corridors of Dravidian heritage since 2020</p>
+  <ul class="footer-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#districts">Districts</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms of Service</a></li>
+  </ul>
+  <div class="footer-copy">
+    <p>🪔 "கோயில் இல்லா ஊரில் குடியிருக்க வேண்டாம்" — Do not live in a town without a temple 🪔</p>
+    <p style="margin-top:0.5rem">© 2025 Tamil Nadu Temple Heritage Tourism. All rights reserved. | Developed with ❤️ for Tamil Culture</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
